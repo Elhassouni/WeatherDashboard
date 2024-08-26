@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 import requests
 # /**
 #  *
@@ -14,6 +15,7 @@ import requests
 
 
 app = Flask(__name__, static_folder='static')
+CORS(app)
 
 # OpenWeatherMap API key
 API_KEY = 'b10dd50b08697be8a1d58ac06d544e72'
