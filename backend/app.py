@@ -50,5 +50,5 @@ def get_weather():
         return jsonify({'error': 'Unable to retrieve weather data'}), response.status_code
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True) #I still didn't confgigure nginix
 
