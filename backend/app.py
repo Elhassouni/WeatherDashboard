@@ -1,15 +1,15 @@
 from flask import Flask, jsonify, request
 import requests
-/**
- *
- *  Flask application for weather data.
- *
- *  Description: This application provides a simple API to fetch weather information
- *  from OpenWeatherMap based on the city and units specified by the user.
- *  Fetching location of the user but not yet implemanted
- *
- *
- */
+# /**
+#  *
+#  *  Flask application for weather data.
+#  *
+#  *  Description: This application provides a simple API to fetch weather information
+#  *  from OpenWeatherMap based on the city and units specified by the user.
+#  *  Fetching location of the user but not yet implemanted
+#  *
+#  *
+#  */
 
 
 
