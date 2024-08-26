@@ -4,7 +4,7 @@ function App() {
   const [data,setData] = useState(null)
  
   const getWeather = async () => {
-    const city = 'fez' 
+    const city = 'paris' 
     try {
       const response = await fetch(`http://localhost:5000/api/weather?city=${city}&units=metric`);
       const data = await response.json();
@@ -25,6 +25,7 @@ function App() {
    getWeather();
    
   },[])
+  if(data){
   return (
     <>
     <h1>weather dashboard app</h1>
@@ -34,6 +35,6 @@ function App() {
     <h3>temperature:{data.temperature}</h3>
     </>
   )
-}
+}}
 
 export default App
