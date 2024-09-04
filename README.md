@@ -1,7 +1,7 @@
 # WeatherApp
 
 <p align="center">
-<img src="flask-server/frontend/weatherApp-Reactjs/src/images/Screenshot.png" width="100%">
+<img src="/frontend/weatherApp-Reactjs/src/images/Screenshot.png" width="100%">
 </p>
 
 ## Description
