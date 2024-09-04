@@ -26,7 +26,7 @@ WeatherApp is a web application that provides weather information based on the u
 ### Backend Setup (Flask)
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/weatherapp.git
+    git clone https://github.com/Elhassouni/WeatherDashboard.git
     cd weatherapp
     ```
 
