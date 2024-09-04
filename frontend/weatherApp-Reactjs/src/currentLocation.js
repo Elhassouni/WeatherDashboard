@@ -46,20 +46,30 @@ function Weather() {
 
   const getWeather = async (position) => {
     try {
-      const response = await axios.get(`/api/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}`);
-      const data = response.data;
+      const lat = position.coords.latitude;
+      const lon = position.coords.longitude;
+      
+      // Fetch location data from reverse geocoding API
+      const locationResponse = await axios.get(`http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=e81f66e133a92ad801772eb5f8aa7956`);
+      const locationData = locationResponse.data[0];
+  
+      // Use location data to get weather
+      const weatherResponse = await axios.get(`/api/weather?lat=${lat}&lon=${lon}`);
+      const weatherData = weatherResponse.data;
+  
       setWeatherData({
-        city: data.name,
-        country: data.sys.country,
-        temperatureC: Math.round(data.main.temp),
-        humidity: data.main.humidity,
-        main: data.weather[0].main,
-        icon: getWeatherIcon(data.weather[0].main),
+        city: locationData.name,
+        country: locationData.country,
+        temperatureC: Math.round(weatherData.main.temp),
+        humidity: weatherData.main.humidity,
+        main: weatherData.weather[0].main,
+        icon: getWeatherIcon(weatherData.weather[0].main),
       });
     } catch (error) {
       setError("Error fetching weather data.");
     }
   };
+  
 
   const getWeatherIcon = (main) => {
     switch (main) {
