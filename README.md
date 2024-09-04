@@ -83,7 +83,7 @@ use requirements.txt when you clone the repo in order to get all dependancies.
         ```nginx
         server {
             listen 80;
-            server_name your_domain_or_IP;
+            server_name raiseordie.tech;
 
             location / {
                 proxy_pass http://127.0.0.1:8000;
@@ -106,7 +106,7 @@ use requirements.txt when you clone the repo in order to get all dependancies.
         ```
 
 ## Usage
-1. Open your web browser and navigate to `http://your_domain_or_IP`.
+1. Open your web browser and navigate to `http://raiseordie.tech`.
 2. You should see the WeatherApp homepage.
 3. Use the search bar to find weather information for a specific city or allow location access to get weather information for your current location.
 
