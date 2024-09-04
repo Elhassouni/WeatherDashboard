@@ -1,4 +1,4 @@
-# WeatherApp
+# WeatherApp raiseordie.tech
 
 <p align="center">
 <img src="/frontend/weatherApp-Reactjs/src/images/Screenshot.png" width="100%">
@@ -13,9 +13,9 @@ WeatherApp is a web application that provides weather information based on the u
 - [Project Structure](#project-structure)
 - [API Endpoints](#api-endpoints)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
+use requirements.txt when you clone the repo in order to get all dependancies.
 
 ### Prerequisites
 - Python 3.x
