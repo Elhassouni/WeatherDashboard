@@ -15,10 +15,10 @@ WeatherApp is a web application that provides weather information based on the u
 - [Contributing](#contributing)
 
 ## Installation
-use requirements.txt when you clone the repo in order to get all dependancies.
+use requirements.txt when you clone the repo in order to get all dependencies, I included everything so have fun.
 
-### Prerequisites
-- Python 3.x
+### Prerequisites go and install all dependencies on the requirements.txt. 
+- Python .x
 - Node.js and npm
 - Gunicorn
 - Nginx
