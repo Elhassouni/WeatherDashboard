@@ -2,7 +2,7 @@ import React from "react";
 import CurrentLocation from "./currentLocation";
 
 // Author ayoub Elhassouni
-// Alx-Africia
+// Alx-Africa
 // Code STD1522351
  
 import "./App.css";

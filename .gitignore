@@ -1,0 +1,57 @@
+# Ignore node_modules directory for frontend dependencies
+frontend/node_modules/
+
+# Ignore build directory for frontend production build
+frontend/build/
+
+# Ignore environment variable files
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Ignore log files
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Ignore coverage directory for frontend tests
+frontend/coverage/
+
+# Ignore macOS specific metadata files
+frontend/.DS_Store
+
+# Ignore Python virtual environment directory for backend
+backend/venv/
+backend/.venv/
+
+# Ignore Python bytecode files
+backend/__pycache__/
+backend/*.pyc
+
+# Ignore environment variable files for backend
+backend/.env
+backend/.env.local
+backend/.env.development.local
+backend/.env.test.local
+backend/.env.production.local
+
+# Ignore log files for backend
+backend/*.log
+
+# Ignore database files
+backend/*.sqlite3
+
+# Ignore compiled files
+backend/*.pyc
+backend/*.pyo
+backend/*.pyd
+
+# Iddgnore macOS specific metadata files
+backend/.DS_Store
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+*.swp

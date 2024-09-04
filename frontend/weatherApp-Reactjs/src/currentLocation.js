@@ -26,50 +26,28 @@ const defaults = {
 function Weather() {
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
+  const [city, setCity] = useState('Fes, MA');
 
-  useEffect(() => {
-    getLocation();
-  }, []);
-
-  const getLocation = () => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(getWeather, handleLocationError);
-    } else { 
-      setError("Geolocation is not supported by this browser.");
-    }
-  };
-
-  const handleLocationError = (error) => {
-    setError("Unable to retrieve your location. Using default location.");
-    getWeather({ coords: { latitude: 28.67, longitude: 77.22 } });
-  };
-
-  const getWeather = async (position) => {
+  const getWeatherByCity = async (city) => {
     try {
-      const lat = position.coords.latitude;
-      const lon = position.coords.longitude;
-      
-      // Fetch location data from reverse geocoding API
-      const locationResponse = await axios.get(`http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=e81f66e133a92ad801772eb5f8aa7956`);
-      const locationData = locationResponse.data[0];
-  
-      // Use location data to get weather
-      const weatherResponse = await axios.get(`/api/weather?lat=${lat}&lon=${lon}`);
-      const weatherData = weatherResponse.data;
-  
+      const response = await axios.get(`/api/weather?city=${city}`);
+      const data = response.data;
       setWeatherData({
-        city: locationData.name,
-        country: locationData.country,
-        temperatureC: Math.round(weatherData.main.temp),
-        humidity: weatherData.main.humidity,
-        main: weatherData.weather[0].main,
-        icon: getWeatherIcon(weatherData.weather[0].main),
+        city: data.name,
+        country: data.sys.country,
+        temperatureC: Math.round(data.main.temp),
+        humidity: data.main.humidity,
+        main: data.weather[0].main,
+        icon: getWeatherIcon(data.weather[0].main),
       });
     } catch (error) {
       setError("Error fetching weather data.");
     }
   };
-  
+
+  useEffect(() => {
+    getWeatherByCity(city);
+  }, [city]);
 
   const getWeatherIcon = (main) => {
     switch (main) {
@@ -145,7 +123,7 @@ function Weather() {
           </div>
         </div>
       </div>
-      <Forcast icon={weatherData.icon} weather={weatherData.main} />
+      <Forcast icon={weatherData.icon} weather={weatherData.main} setCity={setCity} />
     </React.Fragment>
   );
 }
