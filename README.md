@@ -106,7 +106,7 @@ use requirements.txt when you clone the repo in order to get all dependencies, I
         ```
 
 ## Usage
-1. Open your web browser and navigate to `http://raiseordie.tech`.
+1. Im still working on the NGINX configuration on the server so if you cloned my repo and install everything you need from requirements.txt. do npm run you will automatically redirected to the localhost:3000.  BEFORE that run the command "flask start" to recieving your data. 
 2. You should see the WeatherApp homepage.
 3. Use the search bar to find weather information for a specific city or allow location access to get weather information for your current location.
 
