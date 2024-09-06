@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve WeatherDashboard
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/WeatherDashboard/backend
+ExecStart=/home/ubuntu/.local/bin/gunicorn --workers 3 --bind unix:/tmp/gunicorn.sock wsgi:app
+Environment="PATH=/home/ubuntu/WeatherDashboard/backend/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+Environment="OPENWEATHER_API_KEY=b10dd50b08697be8a1d58ac06d544e72"
+[Install]
+WantedBy=multi-user.target

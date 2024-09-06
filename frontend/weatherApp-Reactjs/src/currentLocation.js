@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Clock from "react-live-clock";
 import Forcast from "./forcast";
 import loader from "./images/WeatherIcons.gif";
@@ -28,7 +28,7 @@ function Weather() {
   const [error, setError] = useState(null);
   const [city, setCity] = useState('Fes, MA');
 
-  const getWeatherByCity = async (city) => {
+  const getWeatherByCity = useCallback(async (city) => {
     try {
       const response = await axios.get(`/api/weather?city=${city}`);
       const data = response.data;
@@ -43,11 +43,11 @@ function Weather() {
     } catch (error) {
       setError("Error fetching weather data.");
     }
-  };
+  }, []);
 
   useEffect(() => {
     getWeatherByCity(city);
-  }, [city]);
+  }, [city, getWeatherByCity]);
 
   const getWeatherIcon = (main) => {
     switch (main) {

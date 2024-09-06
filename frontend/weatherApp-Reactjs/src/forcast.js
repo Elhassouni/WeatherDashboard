@@ -8,7 +8,7 @@ function Forcast({ icon, weather, setCity }) {
   const [error, setError] = useState("");
   const [weatherData, setWeatherData] = useState({});
 
-  // I used this Debounced search function to fetch weather data to instantly update the weather data q
+  // I used this Debounced search function to fetch weather data to instantly update the weather data
   const search = useCallback(
     debounce((city) => {
       axios
@@ -18,7 +18,7 @@ function Forcast({ icon, weather, setCity }) {
           setWeatherData(response.data);
           setError("");
           
-          setCity(city); // Update the city in the parent component this was pain in the ass for to figure it out
+          setCity(city); // Update the city in the parent component
         })
         .catch((error) => {
           console.log(error);
@@ -73,7 +73,7 @@ function Forcast({ icon, weather, setCity }) {
           </div>
         </div>
         <ul>
-          {typeof weatherData.main != "undefined" ? (
+          {typeof weatherData.main !== "undefined" ? (
             <div>
               <li className="cityHead">
                 <p>
