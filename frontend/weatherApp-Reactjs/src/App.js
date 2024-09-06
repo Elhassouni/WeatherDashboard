@@ -14,7 +14,6 @@ function App() {
         <CurrentLocation />
       </div>
       <div className="footer-info">
-        {/* You may want to update or remove this footer information */}
         Developed by Ayoub El-Hassouni | Powered by React & Flask & gunicorn & axios & nginx
       </div>
     </React.Fragment>
