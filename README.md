@@ -1,4 +1,4 @@
-# WeatherApp raiseordie.tech
+# MVP WeatherApp raiseordie.tech
 
 <p align="center">
 <img src="/frontend/weatherApp-Reactjs/src/images/Screenshot.png" width="100%">
