@@ -11,8 +11,7 @@ WeatherApp is a web application that provides weather information based on the u
 - [Installation](#installation)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
-- [API Endpoints](#api-endpoints)
-- [Contributing](#contributing)
+- [API Endpoints](#api-endpoints) 
 
 ## Installation
 use requirements.txt when you clone the repo in order to get all dependencies, I included everything so have fun.
