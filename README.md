@@ -4,6 +4,9 @@
 <img src="/frontend/weatherApp-Reactjs/src/images/Screenshot.png" width="100%">
 </p>
 
+![image](https://github.com/user-attachments/assets/859e2e77-186f-415c-b481-17e839e63599)
+
+
 ## Description
 WeatherApp is a web application that provides weather information based on the user's current location or a searched city. The backend is built using Flask to serve a REST API, and the frontend is developed using React. Axios is used for making HTTP requests, Gunicorn serves the Flask application, and Nginx is used as a reverse proxy.
 
